@@ -1,13 +1,14 @@
 <script lang="ts">
-	import { formatName, typeColor } from '$lib/utils';
+	import { darken, formatName, typeColor } from "$lib/utils";
 
 	interface Props {
 		type: string;
-		size?: 'sm' | 'md';
+		size?: "sm" | "md";
 	}
 
-	const { type, size = 'md' }: Props = $props();
-	const color = $derived(typeColor(type));
+	const { type, size = "md" }: Props = $props();
+	// Darkened background guarantees white-text contrast (WCAG AA) on light types.
+	const color = $derived(darken(typeColor(type)));
 </script>
 
 <span
@@ -15,7 +16,7 @@
 	'sm'
 		? 'px-2 py-0.5 text-[0.65rem]'
 		: 'px-3 py-1 text-xs'}"
-	style="background-color: {color}; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);"
+	style="background-color: {color};"
 >
 	{formatName(type)}
 </span>

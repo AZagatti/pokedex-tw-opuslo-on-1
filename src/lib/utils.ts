@@ -128,3 +128,19 @@ export function flattenEvolution(
   walk(root, []);
   return paths;
 }
+
+/**
+ * Darken a hex color by `amount` (0–1) for use as a badge background, so white
+ * text meets WCAG AA contrast even on the lighter type colors.
+ */
+export function darken(hex: string, amount = 0.45): string {
+  const m = /^#?(?<r>[\da-f]{2})(?<g>[\da-f]{2})(?<b>[\da-f]{2})$/iu.exec(hex);
+  if (!m?.groups) {
+    return hex;
+  }
+  const scale = (c: string) =>
+    Math.round(Number.parseInt(c, 16) * (1 - amount))
+      .toString(16)
+      .padStart(2, "0");
+  return `#${scale(m.groups.r)}${scale(m.groups.g)}${scale(m.groups.b)}`;
+}
