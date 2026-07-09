@@ -55,6 +55,7 @@ class PokedexStore {
     const seq = ++this.typeSeq;
     if (this.selectedTypes.length === 0) {
       this.typeMembers = null;
+      this.typeLoading = false;
       return;
     }
     this.typeLoading = true;
@@ -77,6 +78,11 @@ class PokedexStore {
         }
       }
       this.typeMembers = members;
+    } catch (err) {
+      if (seq === this.typeSeq) {
+        this.typeMembers = new Set();
+        this.error = err instanceof Error ? err.message : "Type filter failed.";
+      }
     } finally {
       if (seq === this.typeSeq) {
         this.typeLoading = false;

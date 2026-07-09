@@ -17,7 +17,10 @@
 
 	let loaded = $state(false);
 	let errored = $state(false);
-	const currentSrc = $derived(errored && fallback ? fallback : src);
+	let fallbackFailed = $state(false);
+	const currentSrc = $derived(
+		fallbackFailed ? null : errored ? (fallback ?? null) : src
+	);
 </script>
 
 <div class="relative flex items-center justify-center {className}">
@@ -35,11 +38,13 @@
 			class:opacity-100={loaded}
 			onload={() => (loaded = true)}
 			onerror={() => {
-				if (fallback && currentSrc !== fallback) {
+				if (!errored && fallback && currentSrc !== fallback) {
+					// First failure with a fallback available — retry it.
 					errored = true;
 				} else {
-					loaded = true;
+					// No fallback, or the fallback itself failed — show placeholder.
 					errored = true;
+					fallbackFailed = true;
 				}
 			}}
 		/>
