@@ -16,3 +16,11 @@
 - SPEC said remote repo "already created" but it 404'd — had to `gh repo create`.
 - CI run #1 failed: node 20 vs ultracite dep commander@15 needing node>=22.12 (+ engine-strict). Bumped setup-node to 22.
 - adapter-static fallback switched 404.html->index.html + postbuild cp to 404.html + static/.nojekyll for Pages SPA routing.
+
+## 2026-07-09 — DONE
+
+- Live: https://azagatti.github.io/pokedex-tw-opuslo-on-1/ (HTTP 200, real data loads).
+- CI green (build+test+deploy). 5 commits + fixes.
+- Lighthouse (desktop): Accessibility 100, Best Practices 100, SEO 100, Agentic 100, 0 failed audits. Perf trace: LCP 780ms, CLS 0.00, TTFB 2ms.
+- a11y iterations: type badges needed darkened bg (text-shadow alone doesn't count in contrast algo); footer slate-400→500; card headings h3→h2 for sequential order.
+- Toolchain gotchas: oxfmt can't format .svelte (excluded) → removed from lefthook glob. oxlint autofix wrongly const-ified mutated $state and renamed catch e→error (shadowed state) — both caught by svelte-check/review. CI needed Node 22 (ultracite dep engine).

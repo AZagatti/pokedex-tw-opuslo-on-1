@@ -6,7 +6,7 @@
 
 [**🌐 Live Demo →**](https://azagatti.github.io/pokedex-tw-opuslo-on-1/)
 
-[![CI/CD](https://github.com/AZagatti/pokedex-tw-opuslo-on-1/actions/workflows/ci.yml/badge.svg)](https://github.com/AZagatti/pokedex-tw-opuslo-on-1/actions/workflows/ci.yml) [![Live on GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-brightgreen?logo=github)](https://azagatti.github.io/pokedex-tw-opuslo-on-1/) ![SvelteKit](https://img.shields.io/badge/SvelteKit-5-FF3E00?logo=svelte&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38BDF8?logo=tailwindcss&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-blue)
+[![CI/CD](https://github.com/AZagatti/pokedex-tw-opuslo-on-1/actions/workflows/ci.yml/badge.svg)](https://github.com/AZagatti/pokedex-tw-opuslo-on-1/actions/workflows/ci.yml) [![Live on GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-brightgreen?logo=github)](https://azagatti.github.io/pokedex-tw-opuslo-on-1/) ![SvelteKit](https://img.shields.io/badge/SvelteKit-5-FF3E00?logo=svelte&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38BDF8?logo=tailwindcss&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-blue) ![Lighthouse](https://img.shields.io/badge/Lighthouse-100_A11y_%C2%B7_100_BP_%C2%B7_100_SEO-brightgreen)
 
 </div>
 
