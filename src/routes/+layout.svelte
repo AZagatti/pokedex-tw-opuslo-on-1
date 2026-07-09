@@ -27,7 +27,7 @@
 		{@render children()}
 	</main>
 	<footer
-		class="border-t border-slate-200 py-6 text-center text-xs text-slate-400 dark:border-slate-800 dark:text-slate-500"
+		class="border-t border-slate-200 py-6 text-center text-xs text-slate-500 dark:border-slate-800 dark:text-slate-400"
 	>
 		Data from
 		<a
