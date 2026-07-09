@@ -24,3 +24,10 @@
 - Lighthouse (desktop): Accessibility 100, Best Practices 100, SEO 100, Agentic 100, 0 failed audits. Perf trace: LCP 780ms, CLS 0.00, TTFB 2ms.
 - a11y iterations: type badges needed darkened bg (text-shadow alone doesn't count in contrast algo); footer slate-400→500; card headings h3→h2 for sequential order.
 - Toolchain gotchas: oxfmt can't format .svelte (excluded) → removed from lefthook glob. oxlint autofix wrongly const-ified mutated $state and renamed catch e→error (shadowed state) — both caught by svelte-check/review. CI needed Node 22 (ultracite dep engine).
+
+## 2026-07-09 — DONE
+
+- All 8 tasks complete. CI green, live at https://azagatti.github.io/pokedex-tw-opuslo-on-1/ (HTTP 200).
+- Lighthouse: A11y 100, Best Practices 100, SEO 100, Agentic 100; LCP 780ms, CLS 0.00.
+- Post-launch subagent review caught 3 bugs (typeLoading stuck, unhandled type-fetch error, image placeholder fallback) — all fixed, e2e still 5/5, redeployed.
+- Deep-link routes return HTTP 404 header but render correctly via SPA 404.html fallback (expected GitHub Pages SPA behavior).
