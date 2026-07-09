@@ -15,7 +15,7 @@
 	'sm'
 		? 'px-2 py-0.5 text-[0.65rem]'
 		: 'px-3 py-1 text-xs'}"
-	style="background-color: {color};"
+	style="background-color: {color}; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);"
 >
 	{formatName(type)}
 </span>

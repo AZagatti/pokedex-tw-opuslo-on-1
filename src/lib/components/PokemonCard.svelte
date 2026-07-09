@@ -79,11 +79,11 @@
 		/>
 	</div>
 
-	<h3
+	<h2
 		class="mt-1 text-center text-base font-bold text-slate-800 dark:text-slate-100"
 	>
 		{formatName(displayName)}
-	</h3>
+	</h2>
 
 	<div class="mt-2 flex min-h-[1.75rem] flex-wrap justify-center gap-1.5">
 		{#if data}

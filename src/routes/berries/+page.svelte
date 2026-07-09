@@ -89,9 +89,9 @@
 					</div>
 					<div class="min-w-0 flex-1">
 						<div class="flex items-baseline justify-between gap-2">
-							<h3 class="truncate font-semibold group-hover:text-brand-500">
+							<h2 class="truncate font-semibold group-hover:text-brand-500">
 								{formatName(berry.name)}
-							</h3>
+							</h2>
 							<span class="text-xs text-slate-400">#{berry.id}</span>
 						</div>
 						<p class="mt-0.5 text-xs text-slate-500">

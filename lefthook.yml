@@ -2,7 +2,7 @@ pre-commit:
   parallel: true
   commands:
     format:
-      glob: "*.{js,ts,mjs,cjs,json,css,svelte}"
+      glob: "*.{js,ts,mjs,cjs,json,css,md,yml,yaml}"
       run: npx oxfmt --check {staged_files}
     lint:
       glob: "*.{js,ts,mjs,cjs}"
